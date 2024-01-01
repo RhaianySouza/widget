@@ -137,4 +137,5 @@ section{
     color: var(--cor1);
     overflow-y: scroll;
     height: 150px;
+    text-align: justify;
 }
