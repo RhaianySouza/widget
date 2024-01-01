@@ -1,0 +1,130 @@
+:root{
+	--cor1: #632222;
+	--cor2: #D94A4A;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	background: var(--cor2);
+	font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+header,main,footer{
+	max-width: 350px;
+	width: 100%;
+	color: #fff;
+	margin: 5px auto;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#pomodoro{
+	width: calc(100% - 40px);
+}
+#pomodoro ul{
+	list-style: none;
+	margin: 0;
+	padding: 0px;
+	clear: both;
+	text-align: justify;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#pomodoro>ul li{
+	width: 33%;
+}
+#pomodoro>ul li button{
+	background: var(--cor2);
+    border: none;
+    padding: 10px 5px;
+    border-radius: 3px;
+    width: 96%;
+    font-size: 75%;
+    color: #fff;
+}
+#pomodoro .contador{
+	margin: 25px 0;
+}
+#pomodoro .contador #cont{
+	text-align: center;
+    font-size: 125px;
+}
+#pomodoro .contador button{
+	background: #fff;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 3px;
+    width: 96%;
+    font-size: 150%;
+    color: var(--cor2);
+	box-shadow: 5px 5px 0px #ccc;
+	font-weight: bold;
+}
+
+#pomodoro #tarefa{
+	
+}
+#pomodoro #tarefa input{
+	width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 3px;
+    border: solid 1px #ccc;
+    font-size: 125%;
+    opacity: 0.7;
+	outline: none;
+}
+#pomodoro #tarefa input:focus{
+	opacity: 1;
+}
+#pomodoro #tarefa input::placeholder{
+	color: #333;
+}
+#pomodoro #tarefa button{
+	background: none;
+    outline: none;
+    border: solid 1px;
+    color: #fff;
+    text-align: center;
+    padding: 15px 5px;
+    width: 100%;
+    border-radius: 3px;
+}
+#pomodoro #tarefa ul{
+	
+}
+#pomodoro #tarefa ul li{
+	
+}
+.ctrl{
+	width: 40px;
+}
+.ctrl button{
+	border: solid 1px #ffffff55;
+    border-radius: 3px;
+    background: none;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+	margin: 5px auto;
+}
+footer{
+	opacity: .7;
+	padding: 2px;
+	text-align: center;
+}
+footer a{
+	color: #fff;
+	opacity: .7;
+	text-decoration: none;
+	transition: .5s all;
+	
+}
+footer:hover,footer a:hover{
+	opacity: 1;
+}
