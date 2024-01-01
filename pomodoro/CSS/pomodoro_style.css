@@ -130,9 +130,11 @@ footer:hover,footer a:hover{
 	opacity: 1;
 }
 section{
-	padding: 15px;
+    padding: 15px;
     background: #fff;
     border-radius: 3px;
     margin: 15px;
     color: var(--cor1);
+    overflow-y: scroll;
+    height: 150px;
 }
