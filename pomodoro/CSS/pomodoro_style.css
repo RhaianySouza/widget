@@ -10,7 +10,7 @@ body{
 	overflow: hidden;
 }
 header,main,footer{
-	max-width: 350px;
+	max-width: 400px;
 	width: 100%;
 	color: #fff;
 	margin: 5px auto;
@@ -22,7 +22,7 @@ main {
     flex-wrap: wrap;
 }
 #pomodoro{
-	width: calc(100% - 40px);
+	width: calc(100% - 80px);
 }
 #pomodoro ul{
 	list-style: none;
