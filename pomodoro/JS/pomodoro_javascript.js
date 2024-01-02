@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var body = document.getElementsByTagName('body')[0];
 	$(window).resize(function(){
 		console.log($('main').outerWidth());
-		body.style.transform ='scale('+($('main').outerWidth()*100/350)/100+')';
+		body.style.transform ='scale('+($('main').outerWidth()*100/400)/100+')';
 	});
 });
 var c;
