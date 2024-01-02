@@ -1,6 +1,11 @@
 $(document).ready(function(){
 	pomodoro(1);
 	$('#pomodoro>ul li:nth-child(1) button').css({'background':'var(--cor2)'});
+	var body = document.getElementsByTagName('body')[0];
+	$(window).resize(function(){
+		console.log($('main').outerWidth());
+		body.style.transform ='scale('+($('main').outerWidth()*100/350)/100+')';
+	});
 });
 var c;
 function pomodoro(x){
