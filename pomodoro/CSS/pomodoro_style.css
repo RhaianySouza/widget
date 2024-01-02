@@ -52,7 +52,7 @@ main {
 }
 #pomodoro .contador #cont{
 	text-align: center;
-    font-size: 125px;
+    font-size: 350%;
 }
 #pomodoro .contador button{
 	background: #fff;
