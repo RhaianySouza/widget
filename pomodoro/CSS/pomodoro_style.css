@@ -3,139 +3,203 @@
 	--cor2: #D94A4A;
 }
 body{
-	margin: 0px;
-	padding: 0px;
-	background: var(--cor2);
-	font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-	overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    background: var(--cor2);
+    font-family: 'ArialRounded', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-header,main,footer{
-	max-width: 400px;
-	width: 100%;
-	color: #fff;
-	margin: 5px auto;
+button{
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
 }
-main {
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.pomodoro{
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    margin: 0 auto;
+}
+.pomodoro #menu{
+    width: 100%;
+    margin: 10px auto 0 auto;
+    clear: both;
+}
+.pomodoro #menu ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
-#pomodoro{
-	width: calc(100% - 80px);
+.pomodoro #menu ul li{
+    width: 33%;
+    text-align: center;
+    transition: all .5s;
+    background: transparent;
+    border-radius: 5px;
 }
-#pomodoro ul{
-	list-style: none;
-	margin: 0;
-	padding: 0px;
-	clear: both;
-	text-align: justify;
-	display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.pomodoro #menu ul li[data-set="on"]{
+    background: var(--cor1);
 }
-#pomodoro>ul li{
-	width: 33%;
+.pomodoro #menu ul li:hover{
+    background: var(--cor1);
 }
-#pomodoro>ul li button{
-	background: var(--cor2);
-    border: none;
-    padding: 10px 5px;
-    border-radius: 3px;
-    width: 96%;
-    font-size: 75%;
+.pomodoro #menu ul li button{
+    width: 100%;
+    padding: 15px 3px;
     color: #fff;
+    font-size: 100%;
+    height: 58px;
 }
-#pomodoro .contador{
-	margin: 25px 0;
+#time{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
 }
-#pomodoro .contador #cont{
-	text-align: center;
-    font-size: 350%;
+#time #contador{
+    width: calc(100% - 80px);
+    text-align: center;
+    color: #fff;
+    font-size: 400%;
 }
-#pomodoro .contador button{
-	background: #fff;
-    border: none;
-    padding: 10px 5px;
-    border-radius: 3px;
-    width: 96%;
-    font-size: 150%;
-    color: var(--cor2);
-	box-shadow: 5px 5px 0px #ccc;
-	font-weight: bold;
-}
-
-#pomodoro #tarefa{
-	
-}
-#pomodoro #tarefa input{
-	width: 100%;
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 3px;
-    border: solid 1px #ccc;
-    font-size: 125%;
-    opacity: 0.7;
-	outline: none;
-}
-#pomodoro #tarefa input:focus{
-	opacity: 1;
-}
-#pomodoro #tarefa input::placeholder{
-	color: #333;
-}
-#pomodoro #tarefa button{
-	background: none;
-    outline: none;
-    border: solid 1px;
+#time .ctrl{
+    width: 40px;
+    height: 40px;
     color: #fff;
     text-align: center;
-    padding: 15px 5px;
+    border-radius: 3px;
+    border: solid 1px #fff;
+}
+#time .ctrl button{
+    color: #fff;
+    font-size:  220%;
+    width: 100%;
+}
+#startStop{
     width: 100%;
     border-radius: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
 }
-#pomodoro #tarefa ul{
-	
-}
-#pomodoro #tarefa ul li{
-	
-}
-.ctrl{
-	width: 40px;
-}
-.ctrl button{
-	border: solid 1px #ffffff55;
+#startStop button{
+    display: inline-block;
+    background: #fff;
+    padding: 15px; 
+    width: 150px;
     border-radius: 3px;
-    background: none;
+    box-shadow: 5px 5px 0px #00000099;
+    margin: 15px auto;
+    transition: all .5s;
+    text-transform: uppercase;
+    font-size: 150%;
+}
+#startStop button:hover{
+    box-shadow: -5px -5px 0px #00000099;
+    transform:translateY(10px);
+}
+#startStop button[data-set='off']{
+    display: none;
+}
+.pomodoro #about{
+    width: 200px;
+    clear: both;
+    margin: 50px auto;
+}
+.pomodoro #about div{
+
+}
+.pomodoro #about p{
+    width: 170px;
+    margin: 0 auto;
+    text-align: justify;
+    position: absolute;
+    background: #fff;
     padding: 10px;
-    height: 40px;
-    width: 40px;
-    color: #fff;
-	margin: 5px auto;
+    height: 240px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px #00000033;
+    overflow: hidden;
+    transition: all .5s;
+}
+.pomodoro #about p span{
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.pomodoro #about p span:nth-child(1){
+    position: absolute;
+    background: var(--cor2);
+    z-index: 1;
+    top: -25px;
+    left: -25px;
+    transform: rotate(45deg);
+}
+.pomodoro #about p span:nth-child(2){
+    position: relative;
+    background: #fff;
+    box-shadow: 2px 2px 20px #00000033;
+    top: -25px;
+    left: -25px;
+}
+.pomodoro #about p[page="1"]{
+    z-index: 4;
+}
+.pomodoro #about p[page="2"]{
+    z-index: 3;
+    transform: rotate(5deg);
+}
+.pomodoro #about p[page="3"]{
+    z-index: 2;
+    transform: rotate(10deg);
+}
+.pomodoro #about p[page="4"]{
+    z-index: 1;
+    transform: rotate(15deg);
+}
+.pomodoro #about .ctrl{
+    width: 100%;
+    height: 260px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    transition: all .5s;
+}
+.pomodoro #about .ctrl button{
+    padding: 15px; 
+    width: 50px;
+    border-radius: 3px;
+    transition: all .5s;
+    text-transform: uppercase;
+    font-size: 100%;
+    color: #333;
+    position: relative;
 }
 footer{
-	opacity: .7;
-	padding: 2px;
-	text-align: center;
+  text-align: center;
+  opacity: .8;
+  color: #fff;
+  transition: all .5s;
+  clear: both;
 }
 footer a{
-	color: #fff;
-	opacity: .7;
-	text-decoration: none;
-	transition: .5s all;
-	
+  opacity: .5;
+  color: #fff;
+  text-decoration: none;
+  transition: all .5s;
+  font-size: 20px;
+  display: inline-block;
+  margin: 5px;
 }
-footer:hover,footer a:hover{
-	opacity: 1;
-}
-section{
-    padding: 15px;
-    background: #fff;
-    border-radius: 3px;
-    margin: 15px;
-    color: var(--cor1);
-    overflow-y: scroll;
-    height: 150px;
-    text-align: justify;
+footer:hover, footer a:hover{
+  opacity: 1;
 }
