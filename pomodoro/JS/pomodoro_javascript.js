@@ -17,8 +17,16 @@ function ctrl(x){
     clearInterval(w);
     buttons(2);
     var a = document.getElementById("contador");
+    
     var y = parseInt(a.innerText.substring(0,a.innerText.indexOf(":")));
-    document.getElementById("contador").innerText = (y+x)>=10? (y+x)+":00":"0"+(y+x)+":00";
+    var z = parseInt(a.innerText.substring(a.innerText.indexOf(":")+1));
+    
+    var d = new Date();
+    d.setMinutes(y+x); d.setSeconds(z);
+
+    a.innerText = d.getMinutes()>=10? d.getMinutes()+":": "0"+d.getMinutes()+":";
+    a.innerText += d.getSeconds()>=10? d.getSeconds(): "0"+d.getSeconds();
+    
     p = y+x;
 }
 function cronometro(){
