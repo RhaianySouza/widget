@@ -1,4 +1,6 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
 
 <title>Pomodoro Online</title>
@@ -22,21 +24,20 @@
 <meta property='og:type' content='School'/>
 
 <!--TWITTER-->
-<meta name='twitter:card' content='summary'/>
 <meta name='twitter:image' content=''/>
+<meta name='twitter:card' content='summary'/>
 <meta name='twitter:title' content='Pomodoro Online'>
 <meta name='twitter:url' content='https://pomodoroonline.com/'/>
 <meta name='twitter:description' content='Pomodoro, método de gerenciamento de tempo'/>
 
 <!--DOC EXTERNOS-->
 <link rel="stylesheet" href="./CSS/pomodoro_style.css"/>
-<link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+<script rel="script" src='./JS/pomodoro_javascript.js'></script>
 
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<link href='https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css' rel='stylesheet'/>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src='./JS/pomodoro_javascript.js'></script>
-
 
 <!--FIM METATAG-->
 <meta content='#D94A4A' name='theme-color'/>
@@ -45,46 +46,44 @@
 <meta content='#D94A4A' media='(prefers-color-scheme: light)' name='theme-color'/>
 
 </head>
+
 <body>
-	<header>
-	</header>
-	
-	<main>
-		<div class='ctrl'><button onclick='ctrl(-1)'>-</button></div>
-		<div id='pomodoro'>
-			<ul>
-				<li><button onclick='pomodoro(25)'>Pomodoro</button></li>
-				<li><button onclick='shortBreak(5)'>Intervalo Curto</button></li>
-				<li><button onclick='longBreak(15)'>Intervalo Longo</button></li>
-			</ul>
-			<div class='contador'><div id='cont'></div><button onclick="contador()">Começar</button></div>
-		</div>
-		<div class='ctrl'><button onclick='ctrl(1)'>+</button></div>
-	</main>
-		<section>
-	
-	<p>A Técnica Pomodoro é um método de gerenciamento de tempo desenvolvido por Francesco Cirillo no final dos anos 1980. É uma estratégia que ajuda a melhorar a produtividade e o foco, dividindo o trabalho em intervalos separados por pequenos intervalos.</p>
-
-	<p>Veja como a Técnica Pomodoro normalmente funciona:</p>
-	
-	<ul>
-		<li><b>Escolha uma tarefa:</b> selecione a tarefa na qual deseja trabalhar.</li>
-
-		<li><b>Defina um cronômetro:</b> Defina um cronômetro para 25 minutos (esse intervalo é conhecido como “Pomodoro”). Durante esse tempo, concentre-se apenas na tarefa, sem distrações.</li>
-
-		<li><b>Trabalhe na tarefa:</b> Concentre-se na sua tarefa até o cronômetro tocar. Se você pensar em outra coisa durante esse período, anote em um pedaço de papel, mas retorne imediatamente à tarefa em questão.</li>
-
-		<li><b>Faça uma pequena pausa:</b> Após o Pomodoro de 25 minutos, faça uma pequena pausa (geralmente cerca de 5 minutos) para descansar, relaxar ou fazer algo não relacionado ao trabalho. Essa pausa serve para recarregar as energias.</li>
-
-		<li><b>Repita:</b> Após o pequeno intervalo, inicie outro Pomodoro e continue o ciclo. Depois de completar quatro Pomodoros, faça uma pausa mais longa (geralmente de 15 a 30 minutos).</li>
-	
-	</ul>
-	<p>A técnica se baseia na ideia de que pausas frequentes podem melhorar a agilidade mental e ajudar a manter um alto nível de foco e motivação. Também incentiva a conclusão de tarefas, dividindo-as em unidades menores e gerenciáveis.</p>
-
-	<p>Existem vários aplicativos e cronômetros da Técnica Pomodoro disponíveis que podem ajudá-lo a monitorar seu trabalho e intervalos de pausa, facilitando a implementação desse método em sua rotina diária.</p>
-	</section>
-	
-	<footer>By: <a href='https://github.com/RhaianySouza'>Rhaiany Cezar</a>
-	</footer>
+    <div class="pomodoro">
+        <div id="menu">
+            <ul>
+                <li data-set='on'><button onclick="time(0,25)">Pomodoro</button></li>
+                <li data-set='off'><button onclick="time(1,5)">Intervalo Curto</button></li>
+                <li data-set='off'><button onclick="time(2,15)">Intervalo Longa</button></li>
+            </ul>
+        </div>
+        <div id="time">
+            <div class="ctrl"><button onclick="ctrl(-1)">-</button></div>
+            <div id="contador">01:00</div>
+            <div class="ctrl"><button onclick="ctrl(1)">+</button></div>
+        </div>
+        <div id="startStop">
+            <button onclick="cronometro()" data-set='on'>Iniciar</button>
+            <button onclick="_break()" data-set='off'>Pausar</button>
+            <button onclick="stop()" data-set='off'>Parar</button>
+        </div>
+        <div id='about'>
+            <div>
+                <p page=1><span></span><span></span>A Técnica Pomodoro é um método de gerenciamento de tempo desenvolvido por Francesco Cirillo no final dos anos 1980. É uma estratégia que ajuda a melhorar a produtividade e o foco.</p>
+                <p page=2><span></span><span></span>O tempo é dividido em intervalos de trabalho, geralmente em periodos de 20 à 30 minutos, separados por pequenos intervalos de 3 à 5 minutos, e a cada 4 ciclos completos uma pausa longa de 15min.</p>
+                <p page=3><span></span><span></span>A palavra <i lang="it-IT">"pomodoro"</i> é de origem italiana que traduzida significa <i>"tomate"</i>, em referencia ao cronometro de cozinha no formato da fruta.</p>
+                <p page=4><span></span><span></span>O metodo se baseia na ideia de que pausas frequentes podem aumentar a agilidade mental.</p>
+            </div>
+            <div class='ctrl'>
+                <button onclick='page(1)'><i class='fas'>&#xf104;</i></button>
+              <button onclick='page(-1)'><i class='fas'>&#xf105;</i></button>              
+            </div>
+          </div>
+    </div>
+<footer>
+  <a href='https://github.com/RhaianySouza' target='_blanck'><i class='fab'>&#61595;</i></a>
+  <a href='https://linkedin.com/in/RhaianySouza' target='_blanck'><i class='fab'>&#61665;</i></a>
+  <a href='https://www.youtube.com/@RhaianySouza' target='_blanck'><i class='fab'>&#61799;</i></a>
+</footer>
+    
 </body>
 </html>
